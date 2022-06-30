@@ -15,16 +15,12 @@ export const ShoppingPage = () => {
         <ProductCard product={product}>
           <ProductCard.Image img={product.img} />
           <ProductCard.Title title={'Hello world'} />
-          <ProductCard.Buttons counter={0} increaseBy={function (value: number): void {
-            throw new Error('Function not implemented.');
-          }} />
+          <ProductCard.Buttons />
         </ProductCard>
         <ProductCard product={product}>
           <ProductImage img={product.img} />
-          <ProductTitle title={'Hello world'} />
-          <ProductButtons counter={0} increaseBy={function (value: number): void {
-            throw new Error('Function not implemented.');
-          }} />
+          <ProductTitle />
+          <ProductButtons />
         </ProductCard>
       </div>
     </div>
