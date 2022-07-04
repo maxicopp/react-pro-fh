@@ -15,12 +15,12 @@ export const ShoppingPage = () => {
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         <ProductCard product={product}>
           <ProductCard.Image img={product.img} />
-          <ProductCard.Title title={'Hello world'} />
+          <ProductCard.Title />
           <ProductCard.Buttons />
         </ProductCard>
         <ProductCard product={product} className="bg-dark">
-          <ProductImage img={product.img} />
-          <ProductTitle />
+          <ProductImage className="custom-image" />
+          <ProductTitle className="text-white text-bold" />
           <ProductButtons />
         </ProductCard>
       </div>
