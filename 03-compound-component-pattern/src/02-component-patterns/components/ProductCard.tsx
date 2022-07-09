@@ -8,13 +8,14 @@ export interface Props {
     className?: string;
     product: Product;
     style?: CSSProperties;
+    onChange?: () => void;
 }
 
 export const ProductContext = createContext({} as ProductContextProps);
 const { Provider } = ProductContext;
 
-export const ProductCard = ({ children, product, className, style }: Props) => {
-    const { counter, increaseBy } = useProduct();
+export const ProductCard = ({ children, product, className, style, onChange }: Props) => {
+    const { counter, increaseBy } = useProduct(onChange);
     return (
         <Provider value={{ counter, increaseBy, product }}>
             <div className={`${styles.productCard} ${className}`} style={style}>

@@ -22,6 +22,9 @@ interface ProductInCart extends Product {
 
 export const ShoppingPage = () => {
   const [shoppingCart, setShoppingCart] = useState<{ [key: string]: ProductInCart }>({});
+  const onProductCountChange = () => {
+    console.log('onProductCountChange');
+  }
   return (
     <div>
       <h1>Shopping Store</h1>
@@ -29,7 +32,7 @@ export const ShoppingPage = () => {
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         {
           products.map(product => (
-            <ProductCard product={product} className="bg-dark text-white" key={product.id}>
+            <ProductCard product={product} className="bg-dark text-white" key={product.id} onChange={() => onProductCountChange()}>
               <ProductImage className="custom-image" />
               <ProductTitle className="text-bold" />
               <ProductButtons className="custom-buttons" />
@@ -38,7 +41,7 @@ export const ShoppingPage = () => {
         }
       </div>
       <div className="shopping-cart">
-        <ProductCard product={product2} className="bg-dark text-white" style={{ width: '100px' }}>
+        <ProductCard product={product2} className="bg-dark text-white" style={{ width: '100px' }} onChange={() => onProductCountChange()}>
           <ProductImage className="custom-image" />
           <ProductButtons className="custom-buttons" />
         </ProductCard>
