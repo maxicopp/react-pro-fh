@@ -11,12 +11,12 @@ export const ShoppingPage = () => {
       <hr />
       <ProductCard key={product.id} product={product} className="bg-dark text-white" initialValues={{ count: 4, maxCount: 10 }}>
         {
-          (message: string) => (
+          ({ reset }) => (
             <>
               <ProductImage className="custom-image" />
               <ProductTitle className="text-bold" />
               <ProductButtons className="custom-buttons" />
-              <h1>{message}</h1>
+              <button onClick={reset}>Reset</button>
             </>
           )
         }
