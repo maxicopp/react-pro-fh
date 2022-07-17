@@ -33,5 +33,5 @@ export const useProduct = ({
     isMounted.current = true;
   }, []);
 
-  return { counter, increaseBy };
+  return { counter, increaseBy, maxCount: initialValues?.maxCount };
 };
