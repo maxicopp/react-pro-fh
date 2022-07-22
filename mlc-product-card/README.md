@@ -10,7 +10,7 @@ import { ProductCard, ProductImage, ProductTitle, ProductButtons } from 'mlc-pro
 ```
 
 ```
-<ProductCard key={product.id} product={product} initialValues={{ count: 4, maxCount: 10 }}>
+<ProductCard product={product} initialValues={{ count: 4, maxCount: 10 }}>
   {
     ({ increaseBy, count, isMaxCountReached, reset, maxCount }) => (
       <>
