@@ -7,6 +7,10 @@
     "dist",
     "src"
   ],
+  "repository": {
+    "url": "https://github.com/maxicopp/react-pro-fh/tree/main/mlc-product-card",
+    "type": "git"
+  },
   "engines": {
     "node": ">=10"
   },
@@ -63,5 +67,11 @@
   },
   "dependencies": {
     "postcss": "8.1.0"
-  }
+  },
+  "keywords": [
+    "product",
+    "card",
+    "maximiliano",
+    "coppola"
+  ]
 }
