@@ -12,5 +12,12 @@
         "placeholder": "Coppola",
         "label": "Last Name",
         "value": ""
+    },
+    {
+        "type": "email",
+        "name": "email",
+        "placeholder": "john@google.com",
+        "label": "Email",
+        "value": ""
     }
 ]
